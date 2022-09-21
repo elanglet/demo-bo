@@ -4,7 +4,7 @@ pipeline {
     stage('Get Code') {
       steps {
         cleanWs()
-        git(url: 'https://github.com/elanglet/projet-banque.git', branch: 'master')
+        git(url: 'https://github.com/elanglet/projet-banque.git', branch: 'master', credentialsId: 'Id Github')
       }
     }
 
