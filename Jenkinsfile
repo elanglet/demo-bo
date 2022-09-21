@@ -3,6 +3,7 @@ pipeline {
   stages {
     stage('Get Code') {
       steps {
+        cleanWs()
         git(url: 'https://github.com/elanglet/projet-banque.git', branch: 'master')
       }
     }
